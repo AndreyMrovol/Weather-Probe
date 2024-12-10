@@ -37,6 +37,7 @@ namespace WeatherProbe.Misc
 
             probedWeathers[selectedLevel.PlanetName] = selectedWeather;
             if(WeatherRegistryPatches.IsModPresent){
+                // if weatherregistry is present, don't use probe's syncing
                 WeatherRegistryPatches.SetWeatherOnHost(selectedLevel, selectedWeather);
                 return;
             }
